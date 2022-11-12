@@ -14,6 +14,8 @@
 
 3. Create a Python virtual environment and install Python and Django related dependencies.
 
+ NOTE:- Open the shell or cmd in the cloned repository
+
     ```shell
     cd femicare
     virtualenv venv   # create virtual env
