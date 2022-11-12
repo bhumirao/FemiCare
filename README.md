@@ -22,5 +22,7 @@
     virtualenv fem   # create virtual env
     fem\scripts\activate   # run this command everytime before starting on the project(for linux: source venv/bin/activate)
     pip install -r requirements.txt
+    cd femicare
+    python manage.py runserver
     
     ```
