@@ -14,13 +14,15 @@
 
 3. Create a Python virtual environment and install Python and Django related dependencies.
 
- NOTE:- Open the shell or cmd in the cloned repository.
+ 
  Follow the following shell / cmd commands 
 
     ```
-    cd femicare
+    cd FemiCare
     virtualenv fem   # create virtual env
     fem\scripts\activate   # run this command everytime before starting on the project(for linux: source venv/bin/activate)
     pip install -r requirements.txt
+    cd femicare
+    python manage.py runserver
     
     ```
