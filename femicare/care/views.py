@@ -8,16 +8,17 @@ import pyrebase
 config = {
     "apiKey": "AIzaSyCz4_TIzBI2JTyAgeOvwAmabBe8cOzo6uk",
     "authDomain": "femicare-1bd20.firebaseapp.com",
+    "databaseURL":"https://femicare-1bd20-default-rtdb.firebaseio.com/",
     "projectId": "femicare-1bd20",
     "storageBucket": "femicare-1bd20.appspot.com",
     "messagingSenderId": "814003542467",
     "appId": "1:814003542467:web:6a7447906a9d822adb0576",
-    "databaseURL":"https://femicare-1bd20-default-rtdb.firebaseio.com/"
+    
 }
 # Initialising database,auth and firebase for further use
-firebase = pyrebase.initialize_app(config)
-authe = firebase.auth()
-database = firebase.database()
+firebase=pyrebase.initialize_app(config)
+authe=firebase.auth()
+database=firebase.database()
 
 
 def signIn(request):
@@ -33,7 +34,7 @@ def postsignIn(request):
     pasw = request.POST.get('pass')
     try:
         # if there is no error then signin the user with given email and password
-        user = authe.sign_in_with_email_and_password(email, pasw)
+        user= authe.sign_in_with_email_and_password(email, pasw)
     except:
         message = "Invalid Credentials!!Please ChecK your Data"
         return render(request, "login.html", {"message": message})
